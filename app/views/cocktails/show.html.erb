@@ -1,0 +1,28 @@
+<h1><%= @cocktail.name %></h1>
+
+<!-- Doses & Ingredients -->
+<p>
+  <strong>Doses:</strong>
+  <ol>
+    <% @cocktail.doses.each do |dose| %>
+      <li>
+        <strong>Description: </strong>
+        <%= dose.description %>
+        <br>
+        <strong>Ingredient: </strong>
+        <%= Ingredient.find(dose.ingredient_id).name %>
+        <p><%= link_to 'Delete dose',
+              dose_path(dose),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+        </p>
+      </li>
+    <% end %>
+  </ol>
+</p>
+<!-- ... -->
+
+<!-- New dose Form -->
+<%= link_to 'Add Ingredient', new_cocktail_dose_path(@cocktail.id), class: "btn btn-primary" %>
+
+<!-- ... -->

@@ -13,6 +13,20 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="navbar">
+      <div class="navbar-content">
+        <%= link_to 'My Cocktails', cocktails_path %>
+      </div>
+      <div class="navbar-content">
+        <%= link_to 'New Cocktail', new_cocktail_path %>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <%= yield %>
+    </div>
+
   </body>
 </html>
+
