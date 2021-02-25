@@ -5,3 +5,26 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
+require 'json'
+
+# puts 'Cleaning database...'
+# Ingredient.destroy_all
+
+puts 'Creating 10 fake ingredients...'
+
+api = open('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list').read
+ingredients = JSON.parse(api).to_h
+
+10.times do
+  Ingredient.create(
+    name: ingredients['drinks'].sample['strIngredient1']
+  )
+end
+
+puts 'Finished!'
+
+# API structure
+# drinks = [{'strIngredient1' => VALUE }, {...}, ...]
+# drinks[index] = {'strIngredient1' => VALUE }
+# drinks[index].sample["strIngredient1"]
