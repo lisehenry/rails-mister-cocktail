@@ -5,7 +5,7 @@
 <div class="row">
 
   <!-- Review list -->
-  <div class="col-8">
+  <div class="col-sm-12 col-md-6 col-lg-8">
     <div class="container">
       <h4 class="text-center">All Reviews</h4>
       <% if @cocktail.reviews.empty? %>
@@ -32,7 +32,7 @@
   </div>
 
   <!-- Image -->
-  <div class="col-4">
+  <div class="col-sm-12 col-md-6 col-lg-4">
     <div class="container container-with-image">
     </div>
   </div>
@@ -44,7 +44,7 @@
 <div class="row">
 
   <!-- Ingredient list -->
-  <div class="col-6">
+  <div class="col-sm-12 col-md-6 col-lg-6">
     <div class="container">
       <h4 class="text-center">Ingredient list</h4>
       <% if @cocktail.doses.empty? %>
@@ -68,7 +68,7 @@
   </div>
 
   <!-- New ingredient -->
-  <div class="col-6">
+  <div class="col-sm-12 col-md-6 col-lg-6">
     <div class="container">
       <h4 class="text-center">Add an ingredient</h4>
       <%= simple_form_for [ @cocktail, @dose ] do |f| %>
