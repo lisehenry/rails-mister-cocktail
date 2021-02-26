@@ -8,6 +8,7 @@ class CocktailsController < ApplicationController
   def show
     # set_cocktail
     @dose = Dose.new
+    @review = Review.new
   end
 
   def new
