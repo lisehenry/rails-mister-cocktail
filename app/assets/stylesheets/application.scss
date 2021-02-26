@@ -12,42 +12,51 @@
 @import "components/index";
 @import "pages/index";
 
-// My CSS
-h1{
-  text-align: center;
-}
 
-.navbar{
-  background-color: #f8f8f8;
-  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 40px;
-}
-
-.navbar-content{
-  margin: 0 15px;
-
-  a{
-    text-decoration: none;
-    color: grey;
-  }
-
-  a:hover{
-    color: black;
-  }
-}
+// general CSS
 
 .main-container{
-  width: 60%;
+  width: 75vw;
   margin: auto;
 }
 
-.cards{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  margin: 30px 0;
+.container{
+  min-height: 350px;
+  margin: 25px 0;
+  padding: 30px;
+  box-shadow: 2px 4px 10px grey;
+  border-radius: 7px;
+
+  p{
+    margin: 0 0 5px;
+  }
+
+  // .btn{
+  //   margin: 0;
+  //   font-size: 15px;
+  // }
+
+
+
 }
+
+.container-with-image{
+  background-image: url(https://images.pexels.com/photos/1304541/pexels-photo-1304541.jpeg?cs=srgb&dl=pexels-isabella-mendes-1304541.jpg&fm=jpg);
+  background-size: cover;
+  background-position: bottom center;
+  height: 350px;
+}
+
+// //
+
+// IMAGES =
+// ["https://images.pexels.com/photos/989703/pexels-photo-989703.jpeg?cs=srgb&dl=pexels-oleg-magni-989703.jpg&fm=jpg",
+//      "https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg?cs=srgb&dl=pexels-isabella-mendes-338713.jpg&fm=jpg",
+//      "https://images.pexels.com/photos/2480828/pexels-photo-2480828.jpeg?cs=srgb&dl=pexels-antonio-jose-meza-c%C3%A1rdenas-2480828.jpg&fm=jpg",
+//      "https://images.pexels.com/photos/1187766/pexels-photo-1187766.jpeg?cs=srgb&dl=pexels-evg-culture-1187766.jpg&fm=jpg",
+//      "https://images.pexels.com/photos/1590154/pexels-photo-1590154.jpeg?cs=srgb&dl=pexels-kim-van-vuuren-1590154.jpg&fm=jpg",
+//      "https://images.pexels.com/photos/2615326/pexels-photo-2615326.jpeg?cs=srgb&dl=pexels-ekrulila-2615326.jpg&fm=jpg",
+//      "https://images.pexels.com/photos/1304541/pexels-photo-1304541.jpeg?cs=srgb&dl=pexels-isabella-mendes-1304541.jpg&fm=jpg"
+//     ]
+
+

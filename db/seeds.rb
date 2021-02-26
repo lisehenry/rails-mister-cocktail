@@ -8,21 +8,24 @@
 require 'open-uri'
 require 'json'
 
-# puts 'Cleaning database...'
+# puts 'Cleaning databases...'
 # Ingredient.destroy_all
+# Cocktail.destroy_all
+# Dose.destroy_all
+# puts 'Databases cleaned!'
 
-puts 'Creating 10 fake ingredients...'
+# puts 'Creating 10 fake ingredients...'
 
-api = open('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list').read
-ingredients = JSON.parse(api).to_h
+# api = open('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list').read
+# ingredients = JSON.parse(api).to_h
 
-10.times do
-  Ingredient.create(
-    name: ingredients['drinks'].sample['strIngredient1']
-  )
-end
+# 10.times do
+#   Ingredient.create(
+#     name: ingredients['drinks'].sample['strIngredient1']
+#   )
+# end
 
-puts 'Finished!'
+# puts 'Finished!'
 
 # API structure
 # drinks = [{'strIngredient1' => VALUE }, {...}, ...]
