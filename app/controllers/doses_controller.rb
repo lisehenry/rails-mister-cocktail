@@ -7,9 +7,11 @@ class DosesController < ApplicationController
     @dose.cocktail = @cocktail
 
     if @dose.save
-      redirect_to cocktail_path(@cocktail), notice: 'Dose was successfully created.'
+      flash[:alert] = 'Thank you! 😊'
+      redirect_to cocktail_path(@cocktail)
     else
-      render :new
+      flash[:alert] = 'Something went wrong 😅 Try again! 😉'
+      redirect_to cocktail_path(@cocktail)
     end
   end
 

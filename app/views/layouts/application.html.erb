@@ -24,6 +24,21 @@
       </div>
     </div>
 
+    <!-- Flash error -->
+    <% flash.each do |key, value| %>
+      <% if value === 'Thank you! 😊' %>
+        <div class="flash flash-success alert alert-dismissible fade show" role="alert">
+          <%= value %>
+          <a data-dismiss="alert" aria-label="Close"><i class="fas fa-times"></i></a>
+        </div>
+      <% elsif value === 'Something went wrong 😅 Try again! 😉' %>
+        <div class="flash flash-danger alert alert-dismissible fade show" role="alert">
+          <%= value %>
+          <a data-dismiss="alert" aria-label="Close"><i class="fas fa-times"></i></a>
+        </div>
+      <% end %>
+    <% end %>
+
     <!-- Body -->
     <div class="main-container">
       <%= yield %>
