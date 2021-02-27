@@ -4,5 +4,5 @@ class Cocktail < ApplicationRecord
   has_many :reviews, dependent: :destroy
 
   validates :name, presence: true, uniqueness: true
-  validates :image_url, presence: true
+  validates :image_url, presence: true, format: { with: /\Ahttps:\/\/.*\z/ }
 end

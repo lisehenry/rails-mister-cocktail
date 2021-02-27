@@ -17,10 +17,14 @@
     <!-- Navbar -->
     <div class="navbar">
       <div class="navbar-content">
-        <%= link_to 'All Cocktails', cocktails_path %>
+        <%= link_to cocktails_path do %>
+          <i class="fas fa-glass-martini-alt"></i> All Cocktails
+        <% end %>
       </div>
       <div class="navbar-content">
-        <%= link_to 'New Cocktail', new_cocktail_path %>
+        <%= link_to new_cocktail_path do %>
+          <i class="fas fa-edit"></i> New Cocktail
+        <% end %>
       </div>
     </div>
 
@@ -43,6 +47,7 @@
     <div class="main-container">
       <%= yield %>
     </div>
+
 
     <!-- Footer -->
     <div class="footer">

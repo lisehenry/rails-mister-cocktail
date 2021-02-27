@@ -1,8 +1,8 @@
-<!-- New cocktail -->
+<!-- new.html.erb -->
 
 <%= simple_form_for(@cocktail) do |f| %>
   <%= f.input :name %>
-  <%= f.input :image_url %>
+  <%= f.input :image_url, label: 'Image URL (https://...)' %>
   <%= f.button :submit, class: "btn btn-success" %>
   <%= link_to 'Cancel', cocktails_path, class: "btn btn-danger" %>
 <% end %>

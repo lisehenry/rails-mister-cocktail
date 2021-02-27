@@ -8,11 +8,18 @@
     <% @cocktails.each do |cocktail| %>
       <div class="card-category"
            style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                  url(<%= @cocktail.image_url %>)">
+                  url(<%= cocktail.image_url %>)">
         <%= link_to (cocktail_path(cocktail.id)) do %>
           <h4><i class="fas fa-cocktail"></i> <%= cocktail.name %></h4>
         <% end %>
       </div>
     <% end %>
+    <div class="card-category"
+           style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                  url(<%= cloudinary_url("mister-cocktail-background.jpg") %>)">
+      <%= link_to new_cocktail_path, class: "btn btn-ghost" do %>
+        <i class="fas fa-edit"></i>
+      <% end %>
+    </div>
   </div>
 <% end %>
