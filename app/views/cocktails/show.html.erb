@@ -1,18 +1,5 @@
 <h1 class="text-center"><%= @cocktail.name %></h1>
 
-
-<!-- TEST -->
-<div class="container">
-  <% require "open-uri"
-    url = "https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg?cs=srgb&dl=pexels-isabella-mendes-338713.jpg&fm=jpg"
-    file = URI.open(url)
-    test_cocktail = Cocktail.new(name: 'test')
-    test_cocktail.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
-  %>
-</div>
-<!-- TEST -->
-
-
 <!-- 1 ROW -->
 <div class="row">
 
@@ -45,7 +32,7 @@
 
   <!-- Image -->
   <div class="col-sm-12 col-md-6 col-lg-4">
-    <div class="container container-with-image" style="background-image: url(<%= cl_image_path("sample-2.jpg") %>)">
+    <div class="container container-with-image" style="background-image: url(<%= @cocktail.image_url %>)">
     </div>
   </div>
 
