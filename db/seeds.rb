@@ -11,26 +11,26 @@
 # drinks[index] = {'strIngredient1' => VALUE }
 # drinks[index].sample["strIngredient1"]
 
-require 'open-uri'
-require 'json'
+# require 'open-uri'
+# require 'json'
 
-puts 'Cleaning ALL databases...'
+# puts 'Cleaning ALL databases...'
 
-Cocktail.destroy_all
-Ingredient.destroy_all
-Dose.destroy_all
+# Cocktail.destroy_all
+# Ingredient.destroy_all
+# Dose.destroy_all
 
-puts 'Seeding some ingredients...'
+# puts 'Seeding some ingredients...'
 
-api = open('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list').read
-results = JSON.parse(api).to_h
-ingredients = results['drinks']
+# api = open('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list').read
+# results = JSON.parse(api).to_h
+# ingredients = results['drinks']
 
-ingredients.each do |ingredient|
-  Ingredient.create(name: ingredient['strIngredient1'])
-end
+# ingredients.each do |ingredient|
+#   Ingredient.create(name: ingredient['strIngredient1'])
+# end
 
-puts 'Finished!'
+# puts 'Finished!'
 
 # p 'seeding'
 # Ingredient.create(name: "mint")
